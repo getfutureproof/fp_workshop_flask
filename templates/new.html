@@ -1,0 +1,36 @@
+<html>
+<head>
+
+</head>
+<body>
+    <form method="post" action="">
+        Name
+        <input type="text" name="name">
+        Species
+        <input type="text" name="species">
+        <button id="loginButton" type="submit">Save</button>
+    </form>
+
+    <h2>Existing trees:</h2>
+    <ul>        
+        {% for tree in trees %}
+            <p>ID: {{tree.0}}</p>
+            <p>Name: {{tree.2}}</p>
+            <p>Species: {{tree.1}}</p>
+        {% endfor %}
+    </ul>
+</body>
+
+<script>
+    document.getElementById('loginButton').addEventListener("click", function(e) {
+        e.preventDefault();
+        // Grab fields
+        // document.getElementsByName .getAttr("val")
+        // Post to server
+        // fetch
+        // Send back token
+        // localstorage.set("token", token)
+    })
+</script>
+
+</html>
